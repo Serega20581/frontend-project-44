@@ -4,8 +4,8 @@
 import readlineSync from 'readline-sync';
 
 function generateProgression(length) {
-  const start = Math.floor(Math.random() * 10); // Начальное значение генерируется случайно от 0 до 9
-  const diff = Math.floor(Math.random() * 5) + 1; // Разность генерируется случайно от 1 до 5
+  const start = Math.floor(Math.random() * 10);
+  const diff = Math.floor(Math.random() * 5) + 1;
   const progression = [];
 
   for (let i = 0; i < length; i++) {
@@ -37,7 +37,7 @@ function playGame() {
   let isCorrect = true;
 
   while (isCorrect && score < 3) {
-    const progressionLength = Math.floor(Math.random() * 6) + 5; // Длина генерируется случайно от 5 до 10
+    const progressionLength = Math.floor(Math.random() * 6) + 5;
     const generatedProgression = generateProgression(progressionLength);
     const question = hideNumber(generatedProgression);
 
