@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+
 import readlineSync from 'readline-sync';
 
 function calculateGCD(num1, num2) {
@@ -8,6 +10,10 @@ function calculateGCD(num1, num2) {
     num1 = temp;
   }
   return num1;
+}
+
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function playGCDGame() {
