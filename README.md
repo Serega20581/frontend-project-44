@@ -16,12 +16,12 @@
 <h3>Демонстрация игр на работоспособность:</h3>
 
 1. <p><b>brain-even</b>:</p>
-
+https://asciinema.org/a/wjUUKHGPqZhR5PGC9KpPWWmC0
 2. <p><b>brain-calc</b>:</p>
-
+https://asciinema.org/a/6oHoB54XxKDpj941f9qOzM5tS
 3. <p><b>brain-gcd</b>:</p>
-
+ https://asciinema.org/a/gdtBAIVpbGchOh9C3UNX9toOZ
 4. <p><b>brain-progression</b>:</p>
-
+https://asciinema.org/a/yzHVFCS8mka51PmY3yCikx2x9
 5. <p><b>brain-prime</b>:</p>
-
+https://asciinema.org/a/3coT5I2rq7jXOHBX2GaDcSMX5
