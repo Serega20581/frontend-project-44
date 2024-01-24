@@ -42,10 +42,7 @@ function brainCalc() {
     console.log(`Question: ${expression}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (Number(userAnswer) === correctAnswer) {
-      console.log('Correct!');
-      correctAnswerssCount += 1;
-    } 
+    if (Number(userAnswer) === correctAnswer) {console.log('Correct!');correctAnswerssCount += 1;} 
     else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
