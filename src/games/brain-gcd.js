@@ -36,7 +36,8 @@ function brainGcd() {
     if (Number(userAnswer) === correctAnswer) {
       console.log('Correct!');
       correctAnswersCount += 1;
-    } else {
+    } 
+    else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
