@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
+
 function isEven(num) {
   return num % 2 === 0;
 }

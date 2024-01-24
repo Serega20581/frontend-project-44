@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 import readlineSync from 'readline-sync';
 
 function calculateGCD(num1, num2) {
@@ -36,8 +35,7 @@ function brainGcd() {
     if (Number(userAnswer) === correctAnswer) {
       console.log('Correct!');
       correctAnswerCount += 1;
-    } 
-    else {
+    } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;

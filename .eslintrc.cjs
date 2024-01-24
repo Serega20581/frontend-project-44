@@ -1,13 +1,13 @@
 module.exports = {
-    env: {
+  env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  extends: 'airbnb-base', 
+  extends: 'airbnb-base',
   overrides: [
     {
-        env: {
+      env: {
         node: true,
       },
       files: [
@@ -15,12 +15,12 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
+      },
     },
-   },  
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',  
+    sourceType: 'module',
   },
   rules: {
   },

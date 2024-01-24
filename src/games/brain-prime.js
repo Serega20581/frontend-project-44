@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 
-
 import readlineSync from 'readline-sync';
 
 function isPrime(number) {
   if (number <= 1) {
     return false;
   }
-  
+
   for (let i = 2; i < Math.sqrt(number); i++) {
     if (number % i === 0) {
       return false;
     }
   }
-  
+
   return true;
 }
 
@@ -29,7 +28,7 @@ function brainPrime() {
   for (let i = 0; i < roundsCount; i++) {
     const number = Math.floor(Math.random() * 100);
     console.log(`Question: ${number}`);
-    
+
     const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
