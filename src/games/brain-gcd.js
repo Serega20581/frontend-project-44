@@ -22,7 +22,7 @@ function brainGcd() {
   console.log(`Hello, ${name}!\nFind the greatest common divisor of given numbers.`);
 
   const numberOfQuestions = 3;
-  let correctAnswersCount = 0;
+  let correctAnswerCount = 0;
 
   for (let i = 0; i < numberOfQuestions; i++) {
     const num1 = generateRandomNumber(1, 100);
@@ -35,7 +35,7 @@ function brainGcd() {
 
     if (Number(userAnswer) === correctAnswer) {
       console.log('Correct!');
-      correctAnswersCount += 1;
+      correctAnswerCount += 1;
     } 
     else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
