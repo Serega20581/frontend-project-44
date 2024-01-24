@@ -4,12 +4,16 @@
 import readlineSync from 'readline-sync';
 
 function isPrime(number) {
-  if (number <= 0) {
+  if (number <= 1) {
     return false;
   }
-  else if (number >= 10){
-    return false;
+  
+  for (let i = 2; i < Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
   }
+  
   return true;
 }
 
@@ -17,34 +21,30 @@ function brainPrime() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-  let score = 0;
-  let isCorrect = true;
+  let correctAnswersCount = 0;
+  const roundsCount = 3;
 
-  while (isCorrect && score < 3) {
-    const number = Math.floor((Math.random() * 100) + 1);
-
+  for (let i = 0; i < roundsCount; i++) {
+    const number = Math.floor(Math.random() * 100);
     console.log(`Question: ${number}`);
-
+    
     const userAnswer = readlineSync.question('Your answer: ');
 
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
     if (userAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
-      score++;
+      correctAnswersCount++;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Wrong! The correct answer is "${correctAnswer}".`);
       console.log(`Let's try again, ${name}!`);
-      isCorrect = false;
+      return;
     }
   }
 
-  if (score === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  console.log(`Congratulations, ${name}! You answered correctly ${correctAnswersCount} out of ${roundsCount} questions.`);
 }
 
 export default brainPrime;
