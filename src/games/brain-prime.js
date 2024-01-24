@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-
 import readlineSync from 'readline-sync';
 
 function isPrime(number) {
   if (number <= 1) {
     return false;
   }
-  
-  for (let i = 2; i < Math.sqrt(number); i++) {
+
+  for (let i = 2; i < Math.sqrt(number); i += 2) {
     if (number % i === 0) {
       return false;
     }
@@ -17,10 +16,12 @@ function isPrime(number) {
 }
 
 function brainPrime() {
+  // eslint-disable-next-line no-console
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
+  // eslint-disable-next-line no-console
   console.log(`Hello, ${name}!`);
-
+  // eslint-disable-next-line no-console
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   let score = 0;
@@ -28,7 +29,7 @@ function brainPrime() {
 
   while (isCorrect && score < 3) {
     const number = Math.floor(Math.random() * 100);
-
+    // eslint-disable-next-line no-console
     console.log(`Question: ${number}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
@@ -36,16 +37,20 @@ function brainPrime() {
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
     if (userAnswer.toLowerCase() === correctAnswer) {
+      // eslint-disable-next-line no-console
       console.log('Correct!');
       score += 1;
     } else {
+      // eslint-disable-next-line no-console
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      // eslint-disable-next-line no-console
       console.log(`Let's try again, ${name}!`);
       isCorrect = false;
     }
   }
 
   if (score === 3) {
+    // eslint-disable-next-line no-console
     console.log(`Congratulations, ${name}!`);
   }
 }
