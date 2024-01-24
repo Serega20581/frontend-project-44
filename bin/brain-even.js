@@ -20,7 +20,7 @@ function playGame() {
       console.log('Correct!');
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven(randomNumber) ? 'no' : 'yes'}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven(randomNumber) ? 'yes' : 'no'}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
