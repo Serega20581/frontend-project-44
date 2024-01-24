@@ -31,9 +31,8 @@ function brainCalc() {
   console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
 
   const numberOfQuestions = 3;
-  let correctAnswerssCount = 0;
 
-  for (let i = 0; i < numberOfQuestions; i++) {
+  for (let i = 0; i < numberOfQuestions; i+=1) {
     const num1 = generateRandomNumber(1, 20);
     const num2 = generateRandomNumber(1, 20);
     const operator = generateRandomOperator();
@@ -43,7 +42,7 @@ function brainCalc() {
     console.log(`Question: ${expression}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (Number(userAnswer) === correctAnswer) { console.log('Correct!'); correctAnswerssCount += 1; } else { console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`); console.log(`Let's try again, ${name}!`); return; }
+    if (Number(userAnswer) === correctAnswer) { console.log('Correct!'); } else { console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`); console.log(`Let's try again, ${name}!`); return; }
   }
 
   console.log(`Congratulations, ${name}!`);
