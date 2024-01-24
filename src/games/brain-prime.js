@@ -4,12 +4,16 @@
 import readlineSync from 'readline-sync';
 
 function isPrime(number) {
-  if (number <= 0) {
+  if (number <= 1) {
     return false;
   }
-  else if (number >= 10){
-    return false;
+  
+  for (let i = 2; i < Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
   }
+  
   return true;
 }
 
@@ -24,7 +28,7 @@ function brainPrime() {
   let isCorrect = true;
 
   while (isCorrect && score < 3) {
-    const number = Math.floor((Math.random() * 100) + 1);
+    const number = Math.floor(Math.random() * 100);
 
     console.log(`Question: ${number}`);
 
@@ -34,7 +38,7 @@ function brainPrime() {
 
     if (userAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
-      score++;
+      score += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
