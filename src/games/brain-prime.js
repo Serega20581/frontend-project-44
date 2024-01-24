@@ -7,7 +7,7 @@ function isPrime(number) {
     return false;
   }
 
-  for (let i = 2; i < Math.sqrt(number); i+= 1) {
+  for (let i = 2; i < Math.sqrt(number); i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -25,7 +25,7 @@ function brainPrime() {
   let correctAnswersCount = 0;
   const roundsCount = 3;
 
-  for (let i = 0; i < roundsCount; i+= 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const number = Math.floor(Math.random() * 100);
     console.log(`Question: ${number}`);
 
@@ -35,7 +35,7 @@ function brainPrime() {
 
     if (userAnswer.toLowerCase() === correctAnswer) {
       console.log('Correct!');
-      correctAnswersCount+= 1;
+      correctAnswersCount += 1;
     } else {
       console.log(`Wrong! The correct answer is "${correctAnswer}".`);
       console.log(`Let's try again, ${name}!`);

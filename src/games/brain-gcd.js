@@ -22,7 +22,7 @@ function brainGcd() {
 
   const numberOfQuestions = 3;
 
-  for (let i = 0; i < numberOfQuestions; i+= 1) {
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const num1 = generateRandomNumber(1, 100);
     const num2 = generateRandomNumber(1, 100);
     const expression = `${num1} ${num2}`;

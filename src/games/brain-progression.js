@@ -7,7 +7,7 @@ function generateProgression(length) {
   const diff = Math.floor(Math.random() * 5) + 1;
   const progression = [];
 
-  for (let i = 0; i < length; i+= 1) {
+  for (let i = 0; i < length; i += 1) {
     progression.push(start + diff * i);
   }
 
@@ -46,7 +46,7 @@ function brainProgression() {
 
     if (userAnswer === question.hiddenValue) {
       console.log('Correct!');
-      score+= 1;
+      score += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${question.hiddenValue}'.`);
       console.log(`Let's try again, ${name}!`);
