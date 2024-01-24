@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*eslint no-param-reassign: "error"*/
 
 import readlineSync from 'readline-sync';
 

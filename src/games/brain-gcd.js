@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*eslint no-param-reassign: ["error", { "props": true, "ignorePropertyModificationsForRegex": ["^bar"] }]*/
 
 import readlineSync from 'readline-sync';
 
