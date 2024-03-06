@@ -30,8 +30,6 @@ const getName2 = () => {
     const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    const userAnswer = readlineSync.question('Your answer: ');
-    return userAnswer;
     return name;
 };
 const getName3 = () => {
