@@ -17,7 +17,7 @@ function runBrainEven() {
       b(4, name);
       correctAnswersCount += 1;
     } else {
-      b(5, name, 0, userAnswer, correctAnswer);
+      b(5, name, 0, userAnswer);
       return;
     }
   }

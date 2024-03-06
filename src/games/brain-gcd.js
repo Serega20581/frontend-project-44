@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { b, getName3 } from '../index.js';
+
 function calculateGCD(num1, num2) {
   while (num2 !== 0) {
     const temp = num2;

@@ -24,8 +24,9 @@ module.exports = {
   },
   rules: {/* eslint-disable no-console */
   /* eslint-disable no-param-reassign */
-/* eslint-disable no-plusplus */
-// eslint-disable-next-line no-param-reassign
-/* eslint-disable import/prefer-default-export */
-},
+    /* eslint-disable no-plusplus */
+    // eslint-disable-next-line no-param-reassign
+    /* eslint-disable import/prefer-default-export */
+    /* eslint-disable import/extensions */
+  },
 };

@@ -37,10 +37,10 @@ function runBrainCalc() {
     const correctAnswer = calculateExpression(num1, operator, num2);
     const userAnswer = b(3, name, expression);
     if (Number(userAnswer) === correctAnswer) {
-    b(4, name);
-    } else { 
-    b(5, name, 0, userAnswer, correctAnswer);
-    return;
+      b(4, name);
+    } else {
+      b(5, name, 0, userAnswer, correctAnswer);
+      return;
     }
   }
 
