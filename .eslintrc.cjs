@@ -22,6 +22,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {
-  },
+  rules: {/* eslint-disable no-console */
+  /* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
+// eslint-disable-next-line no-param-reassign
+/* eslint-disable import/prefer-default-export */
+},
 };

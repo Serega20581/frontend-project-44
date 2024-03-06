@@ -1,33 +1,27 @@
 #!/usr/bin/env node
-
-import readlineSync from 'readline-sync';
+import { b, getName2 } from '../index.js';
 
 function isEven(num) {
   return num % 2 === 0;
 }
 
-function brainEven() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+function runBrainEven() {
+  const name = getName2();
 
   let correctAnswersCount = 0;
   while (correctAnswersCount < 3) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = b(3, name, randomNumber);
 
     if ((isEven(randomNumber) && userAnswer === 'yes') || (!isEven(randomNumber) && userAnswer === 'no')) {
-      console.log('Correct!');
+      b(4, name);
       correctAnswersCount += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven(randomNumber) ? 'yes' : 'no'}'.`);
-      console.log(`Let's try again, ${name}!`);
+      b(5, name, 0, userAnswer, correctAnswer);
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  b(6, name);
 }
 
-export default brainEven;
+export default runBrainEven;

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-
-import readlineSync from 'readline-sync';
+import { b, getName4 } from '../index.js';
 
 function generateProgression(length) {
   const start = Math.floor(Math.random() * 10);
@@ -17,7 +16,6 @@ function generateProgression(length) {
 function hideNumber(progression) {
   const hiddenIndex = Math.floor(Math.random() * progression.length);
   const hiddenValue = progression[hiddenIndex];
-  // eslint-disable-next-line no-param-reassign
   progression[hiddenIndex] = '..';
 
   return {
@@ -26,14 +24,8 @@ function hideNumber(progression) {
   };
 }
 
-function brainProgression() {
-  // eslint-disable-next-line no-console
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  // eslint-disable-next-line no-console
-  console.log(`Hello, ${name}!`);
-  // eslint-disable-next-line no-console
-  console.log('What number is missing in the progression?');
+function runBrainProgression() {
+  const name = getName4();
 
   let score = 0;
   let isCorrect = true;
@@ -42,28 +34,20 @@ function brainProgression() {
     const progressionLength = Math.floor(Math.random() * 6) + 5;
     const generatedProgression = generateProgression(progressionLength);
     const question = hideNumber(generatedProgression);
-    // eslint-disable-next-line no-console
-    console.log(`Question: ${question.progression}`);
-
-    const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = b(3, name, question.progression);
 
     if (userAnswer === question.hiddenValue) {
-      // eslint-disable-next-line no-console
-      console.log('Correct!');
+      b(4, name);
       score += 1;
     } else {
-      // eslint-disable-next-line no-console
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${question.hiddenValue}'.`);
-      // eslint-disable-next-line no-console
-      console.log(`Let's try again, ${name}!`);
+      b(5, name, 0, userAnswer, question.hiddenValue);
       isCorrect = false;
     }
   }
 
   if (score === 3) {
-    // eslint-disable-next-line no-console
-    console.log(`Congratulations, ${name}!`);
+    b(6, name);
   }
 }
 
-export default brainProgression;
+export default runBrainProgression;

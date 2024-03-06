@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-
-import readlineSync from 'readline-sync';
+import { b, getName } from '../index.js';
 
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,10 +24,8 @@ function calculateExpression(num1, operator, num2) {
   }
 }
 
-function brainCalc() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
+function runBrainCalc() {
+  const name = getName();
 
   const numberOfQuestions = 3;
 
@@ -39,14 +35,16 @@ function brainCalc() {
     const operator = generateRandomOperator();
     const expression = `${num1} ${operator} ${num2}`;
     const correctAnswer = calculateExpression(num1, operator, num2);
-
-    console.log(`Question: ${expression}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-
-    if (Number(userAnswer) === correctAnswer) { console.log('Correct!'); } else { console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`); console.log(`Let's try again, ${name}!`); return; }
+    const userAnswer = b(3, name, expression);
+    if (Number(userAnswer) === correctAnswer) {
+    b(4, name);
+    } else { 
+    b(5, name, 0, userAnswer, correctAnswer);
+    return;
+    }
   }
 
-  console.log(`Congratulations, ${name}!`);
+  b(6, name);
 }
 
-export default brainCalc;
+export default runBrainCalc;
