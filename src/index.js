@@ -53,5 +53,5 @@ const getName5 = () => {
   return name;
 };
 export {
-  getName, b, getName2, getName3, getName4,
+  getName, b, getName2, getName3, getName4, getName5,
 };
