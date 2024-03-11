@@ -16,10 +16,11 @@ function generateProgression(length) {
 function hideNumber(progression) {
   const hiddenIndex = Math.floor(Math.random() * progression.length);
   const hiddenValue = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
+  const finalProgression = progression;
+  finalProgression[hiddenIndex] = '..';
 
   return {
-    progression: progression.join(' '),
+    progression: finalProgression.join(' '),
     hiddenValue: hiddenValue.toString(),
   };
 }

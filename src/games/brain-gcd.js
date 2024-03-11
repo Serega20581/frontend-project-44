@@ -2,12 +2,14 @@
 import { b, getName3 } from '../index.js';
 
 function calculateGCD(num1, num2) {
-  while (num2 !== 0) {
+  let n2 = num2;
+  let n1 = num1;
+  while (n2 !== 0) {
     const temp = num2;
-    num2 = num1 % num2;
-    num1 = temp;
+    n2 = n1 % n2;
+    n1 = temp;
   }
-  return num1;
+  return n1;
 }
 
 function generateRandomNumber(min, max) {
