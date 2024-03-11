@@ -29,7 +29,7 @@ const getName2 = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log('\nAnswer "yes" if given  number is prime. Otherwise answer "no".');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   return name;
 };
 const getName3 = () => {
@@ -43,6 +43,13 @@ const getName4 = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('What number is missing in the progression?');
+  return name;
+};
+const getName5 = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
   return name;
 };
 export {

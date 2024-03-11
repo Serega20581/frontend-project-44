@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { b, getName2 } from '../index.js';
+import { b, getName5 } from '../index.js';
 
 function isPrime(number) {
   if (number <= 1) {
@@ -15,7 +15,7 @@ function isPrime(number) {
 }
 
 function runBrainPrime() {
-  const name = getName2();
+  const name = getName5();
 
   let score = 0;
   let isCorrect = true;
