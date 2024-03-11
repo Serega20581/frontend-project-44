@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-plusplus */
 import { b, getName5 } from '../index.js';
 
 function isPrime(number) {
