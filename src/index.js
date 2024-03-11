@@ -26,23 +26,25 @@ const b = (l, name, k, userAns = '', correctAns = '') => {
   return undefined;
 };
 const getName2 = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    return name;
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('\nAnswer "yes" if given  number is prime. Otherwise answer "no".');
+  return name;
 };
 const getName3 = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!\nFind the greatest common divisor of given numbers.`);
-    return name;
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!\nFind the greatest common divisor of given numbers.`);
+  return name;
 };
 const getName4 = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    console.log('What number is missing in the progression?');
-    return name;
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('What number is missing in the progression?');
+  return name;
 };
-export { getName, b, getName2, getName3, getName4 };
+export {
+  getName, b, getName2, getName3, getName4,
+};
