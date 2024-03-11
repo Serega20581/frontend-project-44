@@ -2,10 +2,10 @@
 import { b, getName3 } from '../index.js';
 
 function calculateGCD(num1, num2) {
-  let n2 = num2;
   let n1 = num1;
+  let n2 = num2;
   while (n2 !== 0) {
-    const temp = num2;
+    const temp = n2;
     n2 = n1 % n2;
     n1 = temp;
   }
